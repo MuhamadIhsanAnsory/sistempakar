@@ -15,6 +15,42 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
+table {
+  border-collapse: collapse;
+display: block;
+  overflow: scroll;  
+
+}
+th {
+  background-color: #54585d;
+  border: 1px solid #54585d;
+}
+th:hover {
+  background-color: #64686e;
+}
+th a {
+  display: block;
+  text-decoration:none;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+}
+th a i {
+  margin-left: 5px;
+  color: rgba(255,255,255,0.4);
+}
+td {
+  padding: 10px;
+  color: #636363;
+  border: 1px solid #dddfe1;
+}
+tr {
+  background-color: #ffffff;
+}
+tr .highlight {
+  background-color: #f9fafb;
+}
 
 /* Header/logo Title */
 .header {
@@ -136,7 +172,8 @@ body {
 </style>
 </head>
 <body>
-	<h3 align=center>Sistem Pakar Metode SMART</h3>
+	<h3 align=center>Perhitungan Penentuan Alternatif Produk Terbaik dengan Metode SMART</h3>
+  <br>
 	<form method="POST">
     <table border="1"cellpadding=3 cellspacing=3
             align=center>
@@ -146,44 +183,49 @@ body {
         </tr>
         
         <tr>
-            <th><input type="text" name="faktor1"></th>
-            <th><input type="text" name="faktor2"></th>
-            <th><input type="text" name="faktor3"></th>
-            <th><input type="text" name="faktor4"></th>
-            <th><input type="text" name="faktor5"></th>
+            
+            <th><input type="text" name="faktor1" value="Kualitas"></th>
+            <th><input type="text" name="faktor2"  value="Fitur"></th>
+            <th><input type="text" name="faktor3" value="Populer"></th>
+            <th><input type="text" name="faktor4" value="Purna Jual"></th>
+            <th><input type="text" name="faktor5" value="Keawetan"></th>
         </tr>
         <tr>
-            <td><input type="text" name="nama1"></td>
+            <td><input type="text" name="nama1" value="Apple"></td>
             <td><input type="text" name="nilai1"></td>
             <td><input type="text" name="nilai2"></td>
             <td><input type="text" name="nilai3"></td>
             <td><input type="text" name="nilai13"></td>
             <td><input type="text" name="nilai14"></td>
+            
         </tr>
         <tr>
-            <td><input type="text" name="nama2"></td>
+            <td><input type="text" name="nama2" value="Asus"></td>
             <td><input type="text" name="nilai4"></td>
              <td><input type="text" name="nilai5"></td>
               <td><input type="text" name="nilai6"></td>
               <td><input type="text" name="nilai15"></td>
               <td><input type="text" name="nilai16"></td>
+              
 
         </tr>
         <tr>
-            <td><input type="text" name="nama3"></td>
+            <td><input type="text" name="nama3" value="Hp"></td>
             <td><input type="text" name="nilai7"></td>
             <td><input type="text" name="nilai8"></td>
             <td><input type="text" name="nilai9"></td>
             <td><input type="text" name="nilai17"></td>
             <td><input type="text" name="nilai18"></td>
+            
         </tr>
         <tr>
-            <td><input type="text" name="nama4"></td>
+            <td><input type="text" name="nama4" value="Lenovo"></td>
             <td><input type="text" name="nilai10"></td>
             <td><input type="text" name="nilai11"></td>
             <td><input type="text" name="nilai12"></td>
             <td><input type="text" name="nilai19"></td>
             <td><input type="text" name="nilai20"></td>
+            
             
         </tr>
 
@@ -193,11 +235,11 @@ body {
          <tr>
             <tr>
             <th bgcolor="blue">bobot</th>
-            <th><input type="text" name="bobot1"></th>
-            <th><input type="text" name="bobot2"></th>
-            <th><input type="text" name="bobot3"></th>
-            <th><input type="text" name="bobot4"></th>
-            <th><input type="text" name="bobot5"></th>
+            <th><input type="text" name="bobot1" value = "100"></th>
+            <th><input type="text" name="bobot2" value = "80"></th>
+            <th><input type="text" name="bobot3" value = "90"></th>
+            <th><input type="text" name="bobot4" value = "50"></th>
+            <th><input type="text" name="bobot5" value = "70"></th>
         </tr>
         </tr>
     </table>
@@ -224,6 +266,7 @@ body {
     	$faktor3    =$_POST['faktor3'];
         $faktor4    =$_POST['faktor4'];
         $faktor5    =$_POST['faktor5'];
+         
         $nama1    =$_POST['nama1'];
         $nama2    =$_POST['nama2'];
         $nama3    =$_POST['nama3'];
@@ -266,8 +309,58 @@ body {
         $nm5   =$bobot5/$sumbobot;
         $sumnm =$nm1+$nm2+$nm3+$nm4+$nm5;
         $all=array($sum,$sum1,$sum2,$sum3);
+        $short=array($nama1=>$sum,$nama2=>$sum1,$nama3=>$sum2,$nama4=>$sum3);
+        arsort($short);
        
-        echo "
+        echo "  
+        <h3 align=center>Alternatif :</h3>
+            <table border='1' cellpadding=3 cellspacing=3
+                        align=center>
+                      
+                     <tr>       
+                        <tr>
+                        <td>$nama1</td>
+                        <td>$nama2</td>
+                        <td>$nama3</td>
+                        <td>$nama4</td>
+                    </tr>
+                    </tr>
+                </table>
+
+               
+                 <h3 align=center>Kriteria :</h3>
+            <table border='1' cellpadding=3 cellspacing=3
+                        align=center>
+                       
+                     <tr>       
+                        <tr>
+                        <td>$faktor1</td>
+                        <td>$faktor2</td>
+                        <td>$faktor3</td>
+                        <td>$faktor4</td>
+                        <td>$faktor5</td>
+                        
+                    </tr>
+                    </tr>
+               
+                </table>
+                <h3 align=center>Bobot :</h3>
+            <table border='1' cellpadding=3 cellspacing=3
+                        align=center>
+                       
+                     <tr>       
+                        <tr>
+                        <td>$bobot1</td>
+                        <td>$bobot2</td>
+                        <td>$bobot3</td>
+                        <td>$bobot4</td>
+                        <td>$bobot5</td>
+                        
+                        
+                    </tr>
+                    </tr>
+               
+                </table>
                 <table border='1' cellpadding='3' cellspacing=3 align=center>
                      <tr>
                         <tr>
@@ -347,6 +440,21 @@ body {
                
             </table>
         ";
+          echo "<br>";
+  echo "<tr>";
+  echo "<h3 align=center> Hasil ranking :</h3>";
+  echo "<br>";
+  
+
+          foreach($short as $x => $x_value) {
+  echo "<table  cellpadding=3 cellspacing=3
+                        align=center>
+                 
+          <td align='center'>";echo "  " . $x . "  " . $x_value;echo"</td>
+          
+                </table>";
+
+    }
     }
 ?>
 

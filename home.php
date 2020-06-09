@@ -157,44 +157,50 @@ body {
   <div class="side">
     <h2>About Me</h2>
     <h5>aboutme me:</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <h3>Name</h3>
-    <p>litle desc</p>
+    
+    <h3>BlackIT</h3>
+    <p>ITconsultant</p>
     
     
   </div>
   <div class="main">
     <h2>AHP</h2>
     <h5>sistem pakar dengan metode ahp</h5>
+    <p><a href="https://drive.google.com/file/d/11ov3gr12bNJ7RmFLWSlxx8QmjU0vN107/view?usp=sharing" download>Download excel file</a></p>
     <p><a href="ahp.php" class="w3-btn w3-block w3-black">coba</a></p>
     
    
     <br>
     <h2>Saw</h2>
     <h5>sistem pakar dengan metode saw</h5>
+    <p><a href="https://drive.google.com/file/d/1Ch-dxUhU_n0gRM7_-BeImBZwUIliZ4di/view?usp=sharing" download>Download excel file</a></p>
     <p><a href="saw.php" class="w3-btn w3-block w3-black">coba</a></p>
-
+    
     <br>
     <h2>mfep</h2>
     <h5>sistem pakar dengan metode mfep</h5>
+    <p><a href="https://drive.google.com/file/d/1XwKmZc5A0daYfT9h_l4LT2Zynfl8tauk/view?usp=sharing" download>Download excel file</a></p>
     <p><a href="mfep.php" class="w3-btn w3-block w3-black">coba</a></p>
     <br>
     <h2>Smart</h2>
     <h5>sistem pakar dengan metode smart</h5>
+    <p><a href="https://drive.google.com/file/d/1xTApN-NwfdPPkpbLL-53-w13IR-nJWqz/view?usp=sharing" download>Download excel file</a></p>
     <p><a href="smart.php" class="w3-btn w3-block w3-black">coba</a></p>
     <br>
     <h2>topsis</h2>
     <h5>sistem pakar dengan metode topsis</h5>
+     <p><a href="https://drive.google.com/file/d/1dS1nr0FYdb9sj4VjZoB44A6urTMlsgJI/view?usp=sharing" download>Download excel file</a></p>
     <p><a href="topsis.php" class="w3-btn w3-block w3-black">coba</a></p>
      <h2>wp</h2>
     <h5>sistem pakar dengan metode wp</h5>
+    <p><a href="https://drive.google.com/file/d/1fMFitBRGTZcra10B5O-50rhQZIB0bcU9/view?usp=sharing" download>Download excel file</a></p>
     <p><a href="wp.php" class="w3-btn w3-block w3-black">coba</a></p>
   </div>
 </div>
 
 <div class="footer">
-  <h2>thanks for use this website, by @tksan_19</h2>
-  <p>buy me a coffe for revision & updates</p>
+  <h2>thanks for use this website, by BlackIT</h2>
+  
 </div>
 
 </body>

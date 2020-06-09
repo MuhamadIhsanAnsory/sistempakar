@@ -15,6 +15,44 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
+table {
+
+border-collapse: collapse;
+display: block;
+  overflow: scroll;  
+
+
+}
+th {
+  background-color: #54585d;
+  border: 1px solid #54585d;
+}
+th:hover {
+  background-color: #64686e;
+}
+th a {
+  display: block;
+  text-decoration:none;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 13px;
+}
+th a i {
+  margin-left: 5px;
+  color: rgba(255,255,255,0.4);
+}
+td {
+  padding: 10px;
+  color: #636363;
+  border: 1px solid #dddfe1;
+}
+tr {
+  background-color: #ffffff;
+}
+tr .highlight {
+  background-color: #f9fafb;
+}
 
 /* Header/logo Title */
 .header {
@@ -136,7 +174,8 @@ body {
 </style>
 </head>
 <body>
-	<h3 align=center>Sistem Pakar Metode AHP</h3>
+	<h3 align=center>Perhitungan Penentuan Alternatif Produk Terbaik dengan Metode AHP</h3>
+    <br>
 	<form method="POST">
     <table border="1"cellpadding=3 cellspacing=3
             align=center>
@@ -146,15 +185,15 @@ body {
         </tr>
         
         <tr>
-            <th><input type="text" name="faktor1"></th>
-            <th><input type="text" name="faktor2"></th>
-            <th><input type="text" name="faktor3"></th>
-            <th><input type="text" name="faktor4"></th>
-            <th><input type="text" name="faktor5"></th>
-            <th><input type="text" name="faktor6"></th>
+            <th><input type="text" name="faktor1" value="Harga"></th>
+            <th><input type="text" name="faktor2" value="Kualitas"></th>
+            <th><input type="text" name="faktor3" value="Fitur"></th>
+            <th><input type="text" name="faktor4" value="Populer"></th>
+            <th><input type="text" name="faktor5" value="Purna Jual"></th>
+            <th><input type="text" name="faktor6" value="Keawetan"></th>
         </tr>
         <tr>
-            <td><input type="text" name="nama1"></td>
+            <td><input type="text" name="nama1" value="Apple"></td>
             <td><input type="text" name="nilai1"></td>
             <td><input type="text" name="nilai2"></td>
             <td><input type="text" name="nilai3"></td>
@@ -163,7 +202,7 @@ body {
             <td><input type="text" name="nilai21"></td>
         </tr>
         <tr>
-            <td><input type="text" name="nama2"></td>
+            <td><input type="text" name="nama2" value="Asus"></td>
             <td><input type="text" name="nilai4"></td>
              <td><input type="text" name="nilai5"></td>
               <td><input type="text" name="nilai6"></td>
@@ -173,7 +212,7 @@ body {
 
         </tr>
         <tr>
-            <td><input type="text" name="nama3"></td>
+            <td><input type="text" name="nama3" value="Hp"></td>
             <td><input type="text" name="nilai7"></td>
             <td><input type="text" name="nilai8"></td>
             <td><input type="text" name="nilai9"></td>
@@ -182,7 +221,7 @@ body {
             <td><input type="text" name="nilai23"></td>
         </tr>
         <tr>
-            <td><input type="text" name="nama4"></td>
+            <td><input type="text" name="nama4" value="Lenovo"></td>
             <td><input type="text" name="nilai10"></td>
             <td><input type="text" name="nilai11"></td>
             <td><input type="text" name="nilai12"></td>
@@ -198,25 +237,32 @@ body {
          <tr>
             <tr>
             <td bgcolor="yellow">variable cost & benefit</td>   
-            <th><input type="text" name="cost1"></th>
-            <th><input type="text" name="cost2"></th>
-            <th><input type="text" name="cost3"></th>
-            <th><input type="text" name="cost4"></th>
-            <th><input type="text" name="cost5"></th>
-            <th><input type="text" name="cost6"></th>
+            <th><input type="text" name="cost1" value="cost"></th>
+            <th><input type="text" name="cost2" value="benefit"></th>
+            <th><input type="text" name="cost3" value="benefit"></th>
+            <th><input type="text" name="cost4" value="benefit"></th>
+            <th><input type="text" name="cost5" value="benefit"></th>
+            <th><input type="text" name="cost6" value="benefit"></th>
         </tr>
         </tr>
     </table> 
-    <h3 align=center>Bobot penilaian :</h3>   
+    <h3 align=center>Bobot Perbandingan :</h3>
+    <h3 align=center>pengisian dengan cara cross section</h3>     
 
      <table border="1"cellpadding=3 cellspacing=3
             align=center>
         <tr>
-            <th rowspan="1" bgcolor="yellow">Nama Penilaian</th>
-            <th colspan="6" rowspan="1" bgcolor="#00ff80"> </th>
+            <th rowspan="1" bgcolor="yellow">Perbandingan</th>
+        
+            <th><input type="text" name="faktor1" value="Harga"></th>
+            <th><input type="text" name="faktor2" value="Kualitas"></th>
+            <th><input type="text" name="faktor3" value="Fitur"></th>
+            <th><input type="text" name="faktor4" value="Populer"></th>
+            <th><input type="text" name="faktor5" value="Purna Jual"></th>
+            <th><input type="text" name="faktor6" value="Keawetan"></th>
         </tr>        
         <tr>
-            <td><input type="text" name="namab1"></td>
+            <td><input type="text" name="namab1" value="Harga"></td>
             <td><input type="text" name="nilaib1"></td>
             <td><input type="text" name="nilaib2"></td>
             <td><input type="text" name="nilaib3"></td>
@@ -225,7 +271,7 @@ body {
             <td><input type="text" name="nilaib21"></td>
         </tr>
         <tr>
-            <td><input type="text" name="namab2"></td>
+            <td><input type="text" name="namab2" value="Kualitas"></td>
             <td><input type="text" name="nilaib4"></td>
              <td><input type="text" name="nilaib5"></td>
               <td><input type="text" name="nilaib6"></td>
@@ -235,7 +281,7 @@ body {
 
         </tr>
         <tr>
-            <td><input type="text" name="namab3"></td>
+            <td><input type="text" name="namab3" value="Fitur"></td>
             <td><input type="text" name="nilaib7"></td>
             <td><input type="text" name="nilaib8"></td>
             <td><input type="text" name="nilaib9"></td>
@@ -244,7 +290,7 @@ body {
             <td><input type="text" name="nilaib23"></td>
         </tr>
         <tr>
-            <td><input type="text" name="namab4"></td>
+            <td><input type="text" name="namab4" value="Populer"></td>
             <td><input type="text" name="nilaib10"></td>
             <td><input type="text" name="nilaib11"></td>
             <td><input type="text" name="nilaib12"></td>
@@ -254,7 +300,7 @@ body {
             
         </tr>
         <tr>
-            <td><input type="text" name="namab5"></td>
+            <td><input type="text" name="namab5" value="Purna Jual"></td>
             <td><input type="text" name="nilaib25"></td>
             <td><input type="text" name="nilaib26"></td>
             <td><input type="text" name="nilaib27"></td>
@@ -263,7 +309,7 @@ body {
             <td><input type="text" name="nilaib30"></td>
         </tr>
         <tr>
-            <td><input type="text" name="namab6"></td>
+            <td><input type="text" name="namab6" value="Keawetan"></td>
             <td><input type="text" name="nilaib31"></td>
             <td><input type="text" name="nilaib32"></td>
             <td><input type="text" name="nilaib33"></td>
@@ -271,7 +317,31 @@ body {
             <td><input type="text" name="nilaib35"></td>
             <td><input type="text" name="nilaib36"></td>
         </tr>
-         
+
+    </table>
+    <h3 align=center>contoh pengisian bobot Perbandingan :</h3> 
+      <table border="1" cellpadding=3 cellspacing=3
+            align=center>
+         <td>
+           
+            <td align='center'>Harga Lebih Penting Dari Kualitas (Nilai=5)</td> 
+            <td align='center'>Harga Lebih Penting Dari Fitur (Nilai=5) </td> 
+            <td align='center'>Harga Lebih Penting Dari Populer (Nilai=5) </td>   
+            <td align='center'>Harga Sedikit Lebih Penting Dari Purna Jual (Nilai=3) </td> 
+            <td align='center'>Harga Sedikit Lebih Penting Dari Keawetan (Nilai=3) </td> 
+            <td align='center'>Kualitas Sama Penting Dengan Fitur (Nilai=1) </td> 
+            <td align='center'>Kualitas Sama Penting Dengan Populer (Nilai=1) </td> 
+            <td align='center'>Purna Jual Sedikit Lebih Penting Dari Kualitas (Nilai=1/3) </td> 
+            <td align='center'>Keawetan Sedikit Lebih Penting Dari Kualitas (Nilai=1/3) </td> 
+            <td align='center'>Fitur Sama Penting Dengan Populer (Nilai=1) </td> 
+            <td align='center'>Purna Jual Sedikit Lebih Penting Dari Fitur (Nilai=1/3) </td> 
+            <td align='center'>Keawetan Sedikit Lebih Penting Dari Fitur (Nilai=1/3)</td> 
+            <td align='center'>Purna Jual Lebih Penting Dari Populer (Nilai=1/3) </td> 
+            <td align='center'>Keawetan Sedikit Lebih Penting Dari Populer (Nilai=1/3) </td> 
+            <td align='center'>Purna Jual Sama Penting Dengan Keawetan (Nilai=1) </td> 
+        </td>
+    </table>
+     <h3 align=center bgcolor=Red>Hanya di isi dengan value nilainya saja</h3>       
 
         
     </table>
@@ -911,82 +981,194 @@ body {
         $sum2     =($m3*$nb1)+($m23*$nb2)+($m33*$nb3)+($m43*$nb4)+($m53*$nb5)+($m63*$nb6);
         $sum3     =($m4*$nb1)+($m24*$nb2)+($m34*$nb3)+($m44*$nb4)+($m54*$nb5)+($m64*$nb6);
         $all=array($sum,$sum1,$sum2,$sum3);
+        $short=array($nama1=>$sum,$nama2=>$sum1,$nama3=>$sum2,$nama4=>$sum3);
+        arsort($short);
        
         echo "
                  
-            <table border='1' cellpadding='4' cellspacing=4
-            align=center>
-                <tr>
-                	<th>Altrnatif</th>
-                    <td>$faktor1</td>
-                    <td>$faktor2</td>
-                    <td>$faktor3</td>
-                    <td>$faktor4</td>
-                    <td>$faktor5</td>
-                    <td>$faktor6</td>
-                    <td>hasil</td>
-                </tr>
-                <tr>    
-                    <td>$nama1</td>
-                   	<td align='right'>";echo number_format($nilai1,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai2,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai3,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai13,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai14,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai21,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($sum,15,',','.');echo "</td>
-                </tr>
-                <tr>    
-                    <td>$nama2</td>
-                   	<td align='right'>";echo number_format($nilai4,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai5,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai6,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai15,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai16,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai22,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($sum1,15,',','.');echo "</td>
-                </tr>
-                <tr>    
-                    <td>$nama3</td>
-                   	<td align='right'>";echo number_format($nilai7,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai8,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai9,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai17,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai18,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai23,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($sum2,15,',','.');echo "</td>
-                </tr>
-                <tr>    
-                    <td>$nama4</td>
-                   	<td align='right'>";echo number_format($nilai10,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai11,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai12,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai19,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai20,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($nilai24,0,',','.');echo "</td>
-                    <td align='right'>";echo number_format($sum3,15,',','.');echo "</td>
-                </tr>
-                
-                 <table border='1' cellpadding=3 cellspacing=3
+            <h3 align=center>Alternatif :</h3>
+            <table border='1' cellpadding=3 cellspacing=3
                         align=center>
-                     <tr>
+                      
+                     <tr>       
                         <tr>
-                        <th bgcolor='yellow'>pembagi</th>
-                        <td align='right'>";echo number_format($p1,2,',','.');echo "</td>
-                        <td align='right'>";echo number_format($p2,2,',','.');echo "</td>
-                        <td align='right'>";echo number_format($p3,2,',','.');echo "</td>
-                        <td align='right'>";echo number_format($p4,2,',','.');echo "</td>
-                        <td align='right'>";echo number_format($p5,2,',','.');echo "</td>
-                        <td align='right'>";echo number_format($p6,2,',','.');echo "</td>
+                        <td>$nama1</td>
+                        <td>$nama2</td>
+                        <td>$nama3</td>
+                        <td>$nama4</td>
                     </tr>
                     </tr>
                 </table>
-                <h3 align=center>Ternormalisasi :</h3>
-                <table border='1' cellpadding=3 cellspacing=3
+
+               
+                 <h3 align=center>Kriteria :</h3>
+            <table border='1' cellpadding=3 cellspacing=3
                         align=center>
-                     <tr>
+                       
+                     <tr>       
+                        <tr>
+                        <td>$faktor1</td>
+                        <td>$faktor2</td>
+                        <td>$faktor3</td>
+                        <td>$faktor4</td>
+                        <td>$faktor5</td>
+                        <td>$faktor6</td>
+                    </tr>
+                    </tr>
+               
+                </table>
+                 <h3 align=center>Cost Benefit :</h3>
+            <table border='1' cellpadding=3 cellspacing=3
+                        align=center>
+                       
+                     <tr>       
+                        <tr>
+                        <td>$cost1</td>
+                        <td>$cost2</td>
+                        <td>$cost3</td>
+                        <td>$cost4</td>
+                        <td>$cost5</td>
+                        <td>$cost6</td>
+                        
+                    </tr>
+                    </tr>
+               
+                </table>
+                <h3 align=center>X =</h3>
+            <table border='1' cellpadding=3 cellspacing=3
+                        align=center>
+                       
+                    <tr>       
+                            
+                    <td align='right'>";echo number_format($nilai1,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai4,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai7,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai10,0,',','.');echo "</td>
+                </tr>
+                <tr>    
+                    
+                    <td align='right'>";echo number_format($nilai2,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai5,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai8,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai11,0,',','.');echo "</td>
+                </tr>
+                <tr>    
+                    
+                    <td align='right'>";echo number_format($nilai3,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai5,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai8,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai12,0,',','.');echo "</td>
+                </tr>
+                <tr>    
+                    
+                    <td align='right'>";echo number_format($nilai13,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai15,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai17,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai19,0,',','.');echo "</td>
+                </tr>
+                <tr>    
+                    
+                    <td align='right'>";echo number_format($nilai14,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai16,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai18,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai20,0,',','.');echo "</td>
+                </tr>
+                <tr>    
+                    
+                    <td align='right'>";echo number_format($nilai21,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai22,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai23,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilai24,0,',','.');echo "</td>
+                
+                    </tr>
+               
+                </table>
+                <h3 align=center>K =</h3>
+            <table border='1' cellpadding=3 cellspacing=3
+                        align=center>
+                      
+                    <tr>       
+                            
+                    <td align='right'>";echo number_format($nilaib1,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib4,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib7,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib10,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib25,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib31,0,',','.');echo "</td>
+                </tr>
+                <tr>    
+                    
+                    <td align='right'>";echo number_format($nilaib2,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib5,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib8,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib11,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib26,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib32,0,',','.');echo "</td>
+                </tr>
+                <tr>    
+                    
+                    <td align='right'>";echo number_format($nilaib3,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib5,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib8,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib12,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib27,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib33,0,',','.');echo "</td>
+                </tr>
+                <tr>    
+                    
+                    <td align='right'>";echo number_format($nilaib13,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib15,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib17,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib19,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib28,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib34,0,',','.');echo "</td>
+                </tr>
+                <tr>    
+                    
+                    <td align='right'>";echo number_format($nilaib14,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib16,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib18,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib20,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib29,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib35,0,',','.');echo "</td>
+                </tr>
+                <tr>    
+                    
+                    <td align='right'>";echo number_format($nilaib21,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib22,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib23,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib24,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib30,0,',','.');echo "</td>
+                    <td align='right'>";echo number_format($nilaib36,0,',','.');echo "</td>
+                
+                    </tr>
+
+                
+                </table>
+                 <h3 align=center> Jk :</h3>
+            <table border='1' cellpadding=3 cellspacing=3
+                        align=center>
+                       
+                     <tr>       
+                        <tr>
+                        <td>$p1</td>
+                        <td>$p2</td>
+                        <td>$p3</td>
+                        <td>$p4</td>
+                        <td>$p5</td>
+                        <td>$p6</td>
+                        
+                    </tr>
+                    </tr>
+               
+                </table>
+                <h3 align=center> Nk :</h3>
+            <table border='1' cellpadding=3 cellspacing=3
+                        align=center>
+                       
+                      <td>
                     <tr>
-                    <td>$namab1</td>
+                    
                         <td align='right'>";echo number_format($n1,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($n2,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($n3,5,',','.');echo "</td>
@@ -995,7 +1177,7 @@ body {
                         <td align='right'>";echo number_format($nl17,5,',','.');echo "</td>  
                     </tr>
                      <tr>
-                     <td>$namab2</td>
+                     
                         <td align='right'>";echo number_format($n5,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($n6,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($n7,5,',','.');echo "</td>
@@ -1004,7 +1186,7 @@ body {
                         <td align='right'>";echo number_format($nl19,5,',','.');echo "</td>  
                     </tr>
                       <tr>
-                      <td>$namab3</td>
+                      
                         <td align='right'>";echo number_format($n9,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nl1,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nl2,5,',','.');echo "</td>
@@ -1013,7 +1195,7 @@ body {
                         <td align='right'>";echo number_format($nl21,5,',','.');echo "</td>  
                     </tr>
                      <tr>
-                     <td>$namab4</td>
+                     
                         <td align='right'>";echo number_format($nl4,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nl5,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nl6,5,',','.');echo "</td>
@@ -1022,7 +1204,7 @@ body {
                         <td align='right'>";echo number_format($nl23,5,',','.');echo "</td>  
                     </tr>
                     <tr>
-                    <td>$namab5</td>
+                    
                         <td align='right'>";echo number_format($nl8,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nl9,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nl10,5,',','.');echo "</td>
@@ -1031,7 +1213,7 @@ body {
                         <td align='right'>";echo number_format($nl25,5,',','.');echo "</td>  
                     </tr>
                      <tr>
-                     <td>$namab6</td>
+                     
                         <td align='right'>";echo number_format($nl12,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nl13,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nl14,5,',','.');echo "</td>
@@ -1039,14 +1221,14 @@ body {
                          <td align='right'>";echo number_format($nl26,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nl27,5,',','.');echo "</td>  
                     </tr>
-                    </tr>
+                    </td>
+               
                 </table>
-                    <h3 align=center>hasil normalisasi 1 :</h3>
-                     <table border='1' cellpadding=3 cellspacing=3
+                <h3 align=center> Jnk :</h3>
+            <table border='1' cellpadding=3 cellspacing=3
                         align=center>
+                       
                      <tr>
-                    <tr>
-
                         <td align='right'>";echo number_format($h1,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($h2,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($h3,5,',','.');echo "</td>
@@ -1054,12 +1236,13 @@ body {
                         <td align='right'>";echo number_format($h5,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($h6,5,',','.');echo "</td>  
                     </tr>
-                    </table>
-                    <h3 align=center>hasil normalisasi di bagi 6 :</h3>
-                     <table border='1' cellpadding=3 cellspacing=3
+               
+                </table>
+                <h3 align=center> W :</h3>
+            <table border='1' cellpadding=3 cellspacing=3
                         align=center>
-                     <tr>
-                    <tr>
+                       
+                      <tr>
                         <td align='right'>";echo number_format($hl1,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($hl2,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($hl3,5,',','.');echo "</td>
@@ -1067,12 +1250,13 @@ body {
                         <td align='right'>";echo number_format($hl5,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($hl6,5,',','.');echo "</td>  
                     </tr>
-                    </table>
-                      <h3 align=center>hasil normalisasi dikali niali konsisten:</h3>
-                     <table border='1' cellpadding=3 cellspacing=3
+               
+                </table>
+                 <h3 align=center> KW :</h3>
+            <table border='1' cellpadding=3 cellspacing=3
                         align=center>
-                     <tr>
-                    <tr>
+                       
+                      <tr>
                         <td align='right'>";echo number_format($nb1,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nb2,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nb3,5,',','.');echo "</td>
@@ -1080,8 +1264,9 @@ body {
                         <td align='right'>";echo number_format($nb5,5,',','.');echo "</td>
                         <td align='right'>";echo number_format($nb6,5,',','.');echo "</td>  
                     </tr>
-                    </table>
-                     <h3 align=center>nilai t:</h3>
+               
+                </table>
+                <h3 align=center>nilai t:</h3>
                      <table  cellpadding=3 cellspacing=3
                         align=center>
                      <tr>
@@ -1089,8 +1274,7 @@ body {
                         <td align='right'>";echo number_format($t,5,',','.');echo "</td>   
                     </tr>
                     </table>
-                    </table>
-                     <h3 align=center>nilai CI:</h3>
+                    <h3 align=center>nilai CI:</h3>
                      <table  cellpadding=3 cellspacing=3
                         align=center>
                      <tr>
@@ -1098,8 +1282,7 @@ body {
                         <td align='right'>";echo number_format($ci,5,',','.');echo "</td>   
                     </tr>
                     </table>
-                     </table>
-                     <h3 align=center>nilai konsisten:</h3>
+                    <h3 align=center>Cr:</h3>
                      <table  cellpadding=3 cellspacing=3
                         align=center>
                      <tr>
@@ -1109,843 +1292,7 @@ body {
                         <td align='right'>";echo number_format($k,1,',','.');echo "</td>    
                     </tr>
                     </table>
-                    <h3 align=center>Antara Cost dan Benefit Perbedaannya dalam Mencari Nilai Matriks ini, Jika Cost Pembagiannya Terbalik :</h3>
-                    <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='blue'>$faktor1</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                               
-                                <td align='right'>";echo number_format($a1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($ab1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($ab2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($ab3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($ab4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($ac1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($ac2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($ac3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($ac4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($ad1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($ad2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($ad3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($ad4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>pembagi</th>
-                        <td align='right'>";echo number_format($f1,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f2,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f3,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f4,5,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                 <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='yellow'>hasil bagi</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                                
-                                <td align='right'>";echo number_format($g1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($gb1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($gb2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($gb3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($gb4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($gc1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($gc2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($gc3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($gc4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($gd1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($gd2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($gd3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($gd4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>hasil</th>
-                        <td align='right'>";echo number_format($l1,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l2,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l3,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l4,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                        <tr>
-                         <th colspan='5' bgcolor='yellow'>atau</th>
-                         </tr>
-                     <tr>
-                        <tr>
-                       
-                        <td align='right'>";echo number_format($m1,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m2,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m3,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m4,6,',','.');echo "</td>
-                        
-                    </tr>
-                         <tr>
-                        
-                        <td align='right'>";echo number_format($b1,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b2,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b3,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b4,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                <h3 align=center>tabel 2 :</h3>
-
-                <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='blue'>$faktor2</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                               
-                                <td align='right'>";echo number_format($a21,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a22,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a23,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a24,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($a2b1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a2b2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a2b3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a2b4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($a2c1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a2c2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a2c3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a2c4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($a2d1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a2d2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a2d3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a2d4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>pembagi</th>
-                        <td align='right'>";echo number_format($f21,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f22,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f23,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f24,5,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                 <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='yellow'>hasil bagi</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                                
-                                <td align='right'>";echo number_format($g21,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g22,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g23,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g24,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($g2b1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g2b2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g2b3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g2b4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($g2c1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g2c2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g2c3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g2c4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($g2d1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g2d2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g2d3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g2d4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>hasil</th>
-                        <td align='right'>";echo number_format($l21,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l22,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l23,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l24,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                        <tr>
-                         <th colspan='5' bgcolor='yellow'>atau</th>
-                         </tr>
-                     <tr>
-                        <tr>
-                       
-                        <td align='right'>";echo number_format($m21,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m22,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m23,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m24,6,',','.');echo "</td>
-                        
-                    </tr>
-                         <tr>
-                        
-                        <td align='right'>";echo number_format($b21,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b22,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b23,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b24,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                 <h3 align=center>tabel 3 :</h3>
-
-                <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='blue'>$faktor3</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                               
-                                <td align='right'>";echo number_format($a31,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a32,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a33,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a34,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($a3b1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a3b2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a3b3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a3b4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($a3c1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a3c2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a3c3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a3c4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($a3d1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a3d2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a3d3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a3d4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>pembagi</th>
-                        <td align='right'>";echo number_format($f31,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f32,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f33,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f34,5,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                 <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='yellow'>hasil bagi</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                                
-                                <td align='right'>";echo number_format($g31,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g32,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g33,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g34,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($g3b1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g3b2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g3b3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g3b4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($g3c1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g3c2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g3c3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g3c4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($g3d1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g3d2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g3d3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g3d4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>hasil</th>
-                        <td align='right'>";echo number_format($l31,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l32,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l33,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l34,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                        <tr>
-                         <th colspan='5' bgcolor='yellow'>atau</th>
-                         </tr>
-                     <tr>
-                        <tr>
-                       
-                        <td align='right'>";echo number_format($m31,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m32,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m33,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m34,6,',','.');echo "</td>
-                        
-                    </tr>
-                         <tr>
-                        
-                        <td align='right'>";echo number_format($b31,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b32,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b33,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b34,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-
-                <h3 align=center>tabel 4 :</h3>
-
-                <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='blue'>$faktor4</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                               
-                                <td align='right'>";echo number_format($a41,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a42,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a43,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a44,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($a4b1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a4b2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a4b3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a4b4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($a4c1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a4c2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a4c3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a4c4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($a4d1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a4d2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a4d3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a4d4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>pembagi</th>
-                        <td align='right'>";echo number_format($f41,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f42,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f43,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f44,5,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                 <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='yellow'>hasil bagi</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                                
-                                <td align='right'>";echo number_format($g41,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g42,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g43,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g44,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($g4b1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g4b2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g4b3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g4b4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($g4c1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g4c2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g4c3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g4c4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($g4d1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g4d2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g4d3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g4d4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>hasil</th>
-                        <td align='right'>";echo number_format($l41,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l42,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l43,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l44,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                        <tr>
-                         <th colspan='5' bgcolor='yellow'>atau</th>
-                         </tr>
-                     <tr>
-                        <tr>
-                       
-                        <td align='right'>";echo number_format($m41,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m42,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m43,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m44,6,',','.');echo "</td>
-                        
-                    </tr>
-                         <tr>
-                        
-                        <td align='right'>";echo number_format($b41,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b42,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b43,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b44,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                <h3 align=center>tabel 5 :</h3>
-
-                <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='blue'>$faktor5</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                               
-                                <td align='right'>";echo number_format($a51,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a52,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a53,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a54,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($a5b1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a5b2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a5b3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a5b4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($a5c1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a5c2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a5c3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a5c4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($a5d1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a5d2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a5d3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a5d4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>pembagi</th>
-                        <td align='right'>";echo number_format($f51,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f52,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f53,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f54,5,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                 <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='yellow'>hasil bagi</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                                
-                                <td align='right'>";echo number_format($g51,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g52,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g53,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g54,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($g5b1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g5b2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g5b3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g5b4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($g5c1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g5c2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g5c3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g5c4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($g5d1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g5d2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g5d3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g5d4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>hasil</th>
-                        <td align='right'>";echo number_format($l51,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l52,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l53,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l54,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                        <tr>
-                         <th colspan='5' bgcolor='yellow'>atau</th>
-                         </tr>
-                     <tr>
-                        <tr>
-                       
-                        <td align='right'>";echo number_format($m51,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m52,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m53,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m54,6,',','.');echo "</td>
-                        
-                    </tr>
-                         <tr>
-                        
-                        <td align='right'>";echo number_format($b51,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b52,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b53,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b54,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-
-                <h3 align=center>tabel 6 :</h3>
-
-                <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='blue'>$faktor6</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                               
-                                <td align='right'>";echo number_format($a61,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a62,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a63,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a64,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($a6b1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a6b2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a6b3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a6b4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($a6c1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a6c2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a6c3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a6c4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($a6d1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a6d2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a6d3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($a6d4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>pembagi</th>
-                        <td align='right'>";echo number_format($f61,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f62,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f63,5,',','.');echo "</td>
-                        <td align='right'>";echo number_format($f64,5,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-
-                 <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
-                            <tr>
-                                <th colspan='5' bgcolor='yellow'>hasil bagi</th>
-                            </tr>
-                            <tr>
-                            
-                            <td>$nama1</td>
-                            <td>$nama2</td>
-                            <td>$nama3</td>
-                            <td>$nama4</td>
-                            
-                            </tr>
-                             <tr>    
-                                
-                                <td align='right'>";echo number_format($g61,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g62,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g63,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g64,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($g6b1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g6b2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g6b3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g6b4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                                
-                                <td align='right'>";echo number_format($g6c1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g6c2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g6c3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g6c4,5,',','.');echo "</td>
-                            </tr>
-                            <tr>    
-                               
-                                <td align='right'>";echo number_format($g6d1,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g6d2,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g6d3,5,',','.');echo "</td>
-                                <td align='right'>";echo number_format($g6d4,5,',','.');echo "</td>
-                            </tr>
-                           
-                    </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                     <tr>
-                        <tr>
-                        <th bgcolor='yellow'>hasil</th>
-                        <td align='right'>";echo number_format($l61,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l62,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l63,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($l64,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                </table>
-                    <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                        <tr>
-                         <th colspan='5' bgcolor='yellow'>atau</th>
-                         </tr>
-                     <tr>
-                        <tr>
-                       
-                        <td align='right'>";echo number_format($m61,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m62,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m63,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($m64,6,',','.');echo "</td>
-                        
-                    </tr>
-                         <tr>
-                        
-                        <td align='right'>";echo number_format($b61,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b62,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b63,6,',','.');echo "</td>
-                        <td align='right'>";echo number_format($b64,6,',','.');echo "</td>
-                        
-                    </tr>
-                    </tr>
-                </table>
-                <h3 align=center> hasil perangkaian :</h3>
+                    <h3 align=center> Normin :</h3>
                  <table border='1'cellpadding=3 cellspacing=3
                              align=center>
                             <tr>
@@ -2002,17 +1349,31 @@ body {
                                 <td align='right'>";echo number_format($m64,5,',','.');echo "</td>
                             </tr>
                 </table>
-
-                <table cellpadding=3 cellspacing=3
-                  align=center>
-                    <tr>
-                    <td>hasil tertinggi adalah ";echo max($all);"</td>
-                    </tr>
-                 </table>
-               
-            </table>
+                <table  cellpadding=3 cellspacing=3
+                        align=center>
+                 <tr>
+            <td align='center'>hasil tertinggi adalah ";
+            echo max($all);"</td>
+              </tr>
+                </table>
+              
         ";
+        echo "<br>";
+  echo "<tr>";
+  echo "<h3 align=center> Hasil ranking :</h3>";
+  echo "<br>";
+  
+
+          foreach($short as $x => $x_value) {
+  echo "<table  cellpadding=3 cellspacing=3
+                        align=center>
+                 
+          <td align='center'>";echo "  " . $x . "  " . $x_value;echo"</td>
+          
+                </table>";
+
     }
+}
 ?>
 
 

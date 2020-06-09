@@ -31,7 +31,7 @@ VALUES ('$username', '$nama', '$pekerjaan','".md5($password)."', '$email', '$trn
         if($result){
             echo "<div class='form'>
 <h3>You are registered successfully.</h3>
-<br/>Click here to <a href='login.php'>Login</a></div>";
+<br/>Click here to <a href='index.php'>Login</a></div>";
         }
     }else{
 ?>
