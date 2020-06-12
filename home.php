@@ -4,204 +4,142 @@ include("auth.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>SisKar</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-/* Header/logo Title */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #1167b1 url(images/bg1.jpeg) 50% 0% no-repeat ;
-  color: white;
-}
-
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
-
-/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Active/current link */
-.navbar a.active {
-  background-color: #666;
-  color: white;
-}
-
-/* Column container */
-.row {  
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-  padding: 20px;
-}
-
-/* Main column */
-.main {   
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 40%;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-.container {
-  padding: 2px 16px;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {   
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
+  <title>SisKar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <?php include('header.php') ?>
 </head>
-<body>
 
-<div class="header">
-  <h1>Welcome to this website</h1>
-  <p> <?php echo $_SESSION['username']; ?>!</p>
-</div>
+<body class="bg-secondary">
 
-<div class="navbar">
-  <a href="home.php" class="active">Home</a>
-  <a href="help.php">Help</a>
-  
-  <a href="logout.php" class="right">Logout</a>
-</div>
+  <nav class="navbar navbar-horizontal navbar-expand navbar-dark bg-default py-2">
+    <div class="container">
+      <h4 class="text-white">Sistem Pakar <i class="fab fa-android"></i></h4>
 
-<div class="row">
-  <div class="side">
-    <h2>About Me</h2>
-    <h5>aboutme me:</h5>
-    
-    <h3>BlackIT</h3>
-    <p>ITconsultant</p>
-    
-    
+      <ul class="navbar-nav ml-lg-auto">
+        <li class="nav-item mx-3">
+          <a class="nav-link nav-link-icon active" href="#">
+            Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" href="help.php">
+            Help
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link text-white" href="logout.php">
+        <i class="fa fa-sign-out-alt"></i>Logout
+      </a>
+    </div>
+  </nav>
+
+
+
+  <div class="jumbotron" style="background-image: url(assets/images/bg2.jpg); background-size: cover; height: 500px">
+    <div class="container">
+
+      <h1 class="display-4 text-white">Selamat datang di website sistem pakar <strong><?php echo $_SESSION['username']; ?> </strong>!</h1>
+      <p class="lead text-white">Website yang menyediakan info seputar pakar yang Anda butuhkan.</p>
+      <hr class="my-4">
+      <p class="text-white mb-5">Mulai sekarang!</p>
+      <a class="btn btn-primary btn-lg" href="help.php" role="button">Pelajari Selengkapnya</a>
+    </div>
   </div>
-  <div class="main">
-    <h2>AHP</h2>
-    <h5>sistem pakar dengan metode ahp</h5>
-    <p><a href="https://drive.google.com/file/d/11ov3gr12bNJ7RmFLWSlxx8QmjU0vN107/view?usp=sharing" download>Download excel file</a></p>
-    <p><a href="ahp.php" class="w3-btn w3-block w3-black">coba</a></p>
-    
-   
-    <br>
-    <h2>Saw</h2>
-    <h5>sistem pakar dengan metode saw</h5>
-    <p><a href="https://drive.google.com/file/d/1Ch-dxUhU_n0gRM7_-BeImBZwUIliZ4di/view?usp=sharing" download>Download excel file</a></p>
-    <p><a href="saw.php" class="w3-btn w3-block w3-black">coba</a></p>
-    
-    <br>
-    <h2>mfep</h2>
-    <h5>sistem pakar dengan metode mfep</h5>
-    <p><a href="https://drive.google.com/file/d/1XwKmZc5A0daYfT9h_l4LT2Zynfl8tauk/view?usp=sharing" download>Download excel file</a></p>
-    <p><a href="mfep.php" class="w3-btn w3-block w3-black">coba</a></p>
-    <br>
-    <h2>Smart</h2>
-    <h5>sistem pakar dengan metode smart</h5>
-    <p><a href="https://drive.google.com/file/d/1xTApN-NwfdPPkpbLL-53-w13IR-nJWqz/view?usp=sharing" download>Download excel file</a></p>
-    <p><a href="smart.php" class="w3-btn w3-block w3-black">coba</a></p>
-    <br>
-    <h2>topsis</h2>
-    <h5>sistem pakar dengan metode topsis</h5>
-     <p><a href="https://drive.google.com/file/d/1dS1nr0FYdb9sj4VjZoB44A6urTMlsgJI/view?usp=sharing" download>Download excel file</a></p>
-    <p><a href="topsis.php" class="w3-btn w3-block w3-black">coba</a></p>
-     <h2>wp</h2>
-    <h5>sistem pakar dengan metode wp</h5>
-    <p><a href="https://drive.google.com/file/d/1fMFitBRGTZcra10B5O-50rhQZIB0bcU9/view?usp=sharing" download>Download excel file</a></p>
-    <p><a href="wp.php" class="w3-btn w3-block w3-black">coba</a></p>
+  <div class="container">
+
+
+    <h3 class="text-center">BlackIT</h3>
+    <p class="text-center">ITconsultant</p>
+
+    <h4>Menu : </h4>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card shadow mt-5" style="width: 18rem;">
+          <div class="card-header bg-info">
+            <h3 class="card-title text-center my-4">AHP</h3>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Sistem pakar dengan metode AHP</p>
+            <a class="btn btn-success btn-block" href="https://drive.google.com/file/d/11ov3gr12bNJ7RmFLWSlxx8QmjU0vN107/view?usp=sharing" download><i class="fas fa-download"></i> <small>Download excel file</small></a>
+            <a class="btn btn-primary btn-block" href="ahp.php" class="w3-btn w3-block w3-black"><i class="fas fa-pencil-ruler"></i> Coba</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow mt-5" style="width: 18rem;">
+          <div class="card-header bg-warning">
+            <h3 class="card-title text-center my-4  text-white">SAW</h3>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Sistem pakar dengan metode SAW</p>
+            <a class="btn btn-success btn-block" href="https://drive.google.com/file/d/1Ch-dxUhU_n0gRM7_-BeImBZwUIliZ4di/view?usp=sharing" download><i class="fas fa-download"></i> <small>Download excel file</small></a>
+            <a class="btn btn-primary btn-block" href="saw.php" class="w3-btn w3-block w3-black"><i class="fas fa-pencil-ruler"></i> Coba</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow mt-5" style="width: 18rem;">
+          <div class="card-header bg-primary">
+            <h3 class="card-title text-center my-4  text-white">MEFP</h3>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Sistem pakar dengan metode MEFP</p>
+            <a class="btn btn-success btn-block" href="https://drive.google.com/file/d/1XwKmZc5A0daYfT9h_l4LT2Zynfl8tauk/view?usp=sharing" download><i class="fas fa-download"></i> <small>Download excel file</small></a>
+            <a class="btn btn-primary btn-block" href="mfep.php" class="w3-btn w3-block w3-black"><i class="fas fa-pencil-ruler"></i> Coba</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow mt-5" style="width: 18rem;">
+          <div class="card-header bg-danger">
+            <h3 class="card-title text-center my-4 text-white">SMART</h3>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Sistem pakar dengan metode SMART</p>
+            <a class="btn btn-success btn-block" href="https://drive.google.com/file/d/1xTApN-NwfdPPkpbLL-53-w13IR-nJWqz/view?usp=sharing" download><i class="fas fa-download"></i> <small>Download excel file</small></a>
+            <a class="btn btn-primary btn-block" href="smart.php" class="w3-btn w3-block w3-black"><i class="fas fa-pencil-ruler"></i> Coba</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow mt-5" style="width: 18rem;">
+          <div class="card-header bg-secondary">
+            <h3 class="card-title text-center my-4">TOPSIS</h3>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Sistem pakar dengan metode TOPSIS</p>
+            <a class="btn btn-success btn-block" href="https://drive.google.com/file/d/1dS1nr0FYdb9sj4VjZoB44A6urTMlsgJI/view?usp=sharing" download><i class="fas fa-download"></i> <small>Download excel file</small></a>
+            <a class="btn btn-primary btn-block" href="topsis.php" class="w3-btn w3-block w3-black"><i class="fas fa-pencil-ruler"></i> Coba</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow mt-5" style="width: 18rem;">
+          <div class="card-header bg-default">
+            <h3 class="card-title text-center my-4 text-white">WP</h3>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text">Sistem pakar dengan metode WP</p>
+            <a class="btn btn-success btn-block" href="https://drive.google.com/file/d/1fMFitBRGTZcra10B5O-50rhQZIB0bcU9/view?usp=sharing" download><i class="fas fa-download"></i> <small>Download excel file</small></a>
+            <a class="btn btn-primary btn-block" href="wp.php" class="w3-btn w3-block w3-black"><i class="fas fa-pencil-ruler"></i> Coba</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
 
-<div class="footer">
-  <h2>thanks for use this website, by BlackIT</h2>
-  
-</div>
-
+  <?php include('footer.php') ?>
 </body>
+
 </html>
