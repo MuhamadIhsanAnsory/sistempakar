@@ -43,12 +43,12 @@
         </tr>
 
         <tr>
-          <th><input required disabled type="hidden" name="faktor1" value="Harga"><label>Harga</label></th>
-          <th><input required disabled type="hidden" name="faktor2" value="Kualitas"><label>Kualitas</label></th>
-          <th><input required disabled type="hidden" name="faktor3" value="Fitur"><label>Fitur</label></th>
-          <th><input required disabled type="hidden" name="faktor4" value="Populer"><label>Populer</label></th>
-          <th><input required disabled type="hidden" name="faktor5" value="Purna Jual"><label>Purna Jual</label></th>
-          <th><input required disabled type="hidden" name="faktor6" value="Keawetan"><label>Keawetan</label></th>
+          <th><input type="hidden" name="faktor1" value="Harga"><label>Harga</label></th>
+          <th><input type="hidden" name="faktor2" value="Kualitas"><label>Kualitas</label></th>
+          <th><input type="hidden" name="faktor3" value="Fitur"><label>Fitur</label></th>
+          <th><input type="hidden" name="faktor4" value="Populer"><label>Populer</label></th>
+          <th><input type="hidden" name="faktor5" value="Purna Jual"><label>Purna Jual</label></th>
+          <th><input type="hidden" name="faktor6" value="Keawetan"><label>Keawetan</label></th>
         </tr>
         <tr>
           <td><input required class="form-control" type="text" name="nama1" value="Apple"></td>
@@ -420,9 +420,9 @@
     arsort($short);
 
     echo " 
+    <div class='container'>
         <h3 align=center>Alternatif :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <table  class='table table-bordered table-hover table-sm table-striped'>
                       
                      <tr>       
                         <tr>
@@ -436,8 +436,7 @@
 
                
                  <h3 align=center>Kriteria :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <table  class='table table-bordered table-hover table-sm table-striped'>
                        
                      <tr>       
                         <tr>
@@ -452,8 +451,7 @@
                
                 </table>
                 <h3 align=center>Bobot Kepentingan:</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <table  class='table table-bordered table-hover table-sm table-striped'>
                        
                      <tr>       
                         <tr>
@@ -469,8 +467,7 @@
                
                 </table>
                  <h3 align=center>Cost Benefit :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <table  class='table table-bordered table-hover table-sm table-striped'>
                        
                      <tr>       
                         <tr>
@@ -485,7 +482,7 @@
                     </tr>
                   </table>
 
-                <table border='1' cellpadding='3' cellspacing=3 align=center>
+                <table class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
                         <th bgcolor='blue'>total kepentingan</th>
@@ -497,17 +494,16 @@
                   
 
                  
-            <table border='1' cellpadding='4' cellspacing=4
-            align=center>
+            <table class='table table-bordered table-hover table-sm table-striped'>
                 <tr>
-                	<th>Altrnatif</th>
-                    <td>$faktor1</td>
-                    <td>$faktor2</td>
-                    <td>$faktor3</td>
-                    <td>$faktor4</td>
-                    <td>$faktor5</td>
-                    <td>$faktor6</td>
-                    <td>hasil</td>
+                	<th>Alternatif</th>
+                    <th>$faktor1</th>
+                    <th>$faktor2</th>
+                    <th>$faktor3</th>
+                    <th>$faktor4</th>
+                    <th>$faktor5</th>
+                    <th>$faktor6</th>
+                    <th>Hasil</th>
                 </tr>
                 <tr>    
                     <td>$nama1</td>
@@ -606,11 +602,10 @@
     echo "</td>
                 </tr>
                 
-                 <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                 <table  class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
-                        <th bgcolor='yellow'>pembagi</th>
+                        <th bgcolor='yellow'>Pembagi</th>
                         <td align='right'>";
     echo number_format($p1, 2, ',', '.');
     echo "</td>
@@ -633,8 +628,7 @@
                     </tr>
                 </table>
                 <h3 align=center>Ternormalisasi :</h3>
-                <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                <table  class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                     <tr>
                         <td align='right'>";
@@ -723,8 +717,7 @@
                     </tr>
                 </table>
                  <h3 align=center>Terbobot :</h3>
-                <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                <table  class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                     <tr>
                         <td align='right'>";
@@ -813,8 +806,7 @@
                     </tr>
                 </table>
                 
-                  <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                  <table  class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
                         <th bgcolor='blue'>A +</th>
@@ -839,8 +831,7 @@
                     </tr>
                     </tr>
                 </table>
-                 <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                 <table  class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
                         <th bgcolor='yellow'>A -</th>
@@ -866,8 +857,7 @@
                     </tr>
                 </table>
 
-                 <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                 <table  class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
                         <th bgcolor='green'>D +</th>
@@ -887,8 +877,7 @@
                     </tr>
                     </tr>
                 </table>
-                 <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                 <table  class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
                         <th bgcolor='red'>D -</th>
@@ -912,7 +901,7 @@
                 <table cellpadding=3 cellspacing=3
                   align=center>
                     <tr>
-                    <td>hasil tertinggi adalah ";
+                    <td>Hasil tertinggi adalah ";
     echo max($all);
     "</td>
                     </tr>
@@ -934,9 +923,11 @@
       echo "  " . $x . "  " . $x_value;
       echo "</td>
           
-                </table>";
+                </table>
+                </div>";
     }
   }
+  include('footer.php');
   ?>
 
 

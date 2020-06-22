@@ -168,9 +168,11 @@
     arsort($short);
 
     echo "  
+    <div class='container'>
+    
         <h3 align=center>Alternatif :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+        <div class='row justify-content-center'>     
+        <table  class='table table-bordered table-hover table-sm table-striped'>
                       
                      <tr>       
                         <tr>
@@ -182,10 +184,10 @@
                     </tr>
                 </table>
 
-               
+               </div>
                  <h3 align=center>Kriteria :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <div class='row justify-content-center'> 
+                 <table  class='table table-bordered table-hover table-sm table-striped'>
                        
                      <tr>       
                         <tr>
@@ -199,9 +201,10 @@
                     </tr>
                
                 </table>
+                </div>
                 <h3 align=center>Bobot :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <div class='row justify-content-center'> 
+                <table  class='table table-bordered table-hover table-sm table-striped'>
                        
                      <tr>       
                         <tr>
@@ -216,20 +219,20 @@
                     </tr>
                
                 </table>
-                <table border='1' cellpadding='3' cellspacing=3 align=center>
+                </div>
+                <table class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
-                        <th bgcolor='blue'>total bobot</th>
+                        <th bgcolor='blue'>Total bobot</th>
                         <th>$sumbobot</th>
                     </tr>
                     </tr>
                 </table>
                  
-                  <table  cellpadding=3 cellspacing=3
-                        align=center>
+                  <table  class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
-                        <th bgcolor='yellow'>normalisasi bobot</th>
+                        <th bgcolor='yellow'>Normalisasi bobot</th>
                         <td align='right'>";
     echo number_format($nm1, 5, ',', '.');
     echo "</td>
@@ -251,16 +254,15 @@
                     </tr>
                     </tr>
                 </table>
-            <table border='1' cellpadding='4' cellspacing=4
-            align=center>
+            <table class='table table-bordered table-hover table-sm table-striped'>
                 <tr>
                 	<th>Altrnatif</th>
-                    <td>$faktor1</td>
-                    <td>$faktor2</td>
-                    <td>$faktor3</td>
-                    <td>$faktor4</td>
-                    <td>$faktor5</td>
-                    <td>hasil</td>
+                    <th>$faktor1</th>
+                    <th>$faktor2</th>
+                    <th>$faktor3</th>
+                    <th>$faktor4</th>
+                    <th>$faktor5</th>
+                    <th>Hasil</th>
                 </tr>
                 <tr>    
                     <td>$nama1</td>
@@ -346,12 +348,11 @@
     echo number_format($sum3, 0, ',', '.');
     echo "</td>
                 </tr>
-                <table cellpadding=3 cellspacing=3
-          		  align=center>
+                <table class='table table-bordered table-hover table-sm table-striped'>
     	 			<tr>
-    	 			<td>hasil tertinggi adalah ";
+    	 			<th class='text-center'>Hasil tertinggi adalah ";
     echo max($all);
-    "</td>
+    "</th>
             		</tr>
    				 </table>
                
@@ -364,16 +365,18 @@
 
 
     foreach ($short as $x => $x_value) {
-      echo "<table  cellpadding=3 cellspacing=3
-                        align=center>
+      echo "<table  class='table table-bordered table-hover table-sm table-striped'>
                  
           <td align='center'>";
       echo "  " . $x . "  " . $x_value;
       echo "</td>
           
-                </table>";
+                </table>
+                
+                </div>";
     }
   }
+  include('footer.php')
   ?>
 
 

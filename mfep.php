@@ -36,7 +36,7 @@
   <div class="justify-content-center row">
 
     <form method="POST">
-      <table class="table table-responsive table-bordered table-hover table-sm table-striped">
+      <table class="table table-responsive table-bordered table-hover table-sm table-bordered table-striped">
         <tr>
           <th rowspan="3" bgcolor="yellow">Alternatif</th>
           <th colspan="3" class="bg-success">Faktor Penilaian</th>
@@ -143,14 +143,15 @@
     arsort($short);
 
     echo "
-                <table  cellpadding=3 cellspacing=3
-                        align=center>
+    <div class='container'>
+                <table  class='table table-bordered table-striped table-hover'>
                  <tr>
-                          <td>Alternatif : </td>
+                          <th class='text-center'>Alternatif : </th>
                 </tr>
                 </table>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+
+            <div class='justify-content-center row'>
+                <table class='table table-bordered table-striped table-hover'>
                      <tr>       
                         <tr>
                         <td>$nama1</td>
@@ -160,21 +161,20 @@
                     </tr>
                     </tr>
                 </table>
+                </div>
 
-                <table  cellpadding=3 cellspacing=3
-                        align=center>
+                <table  class='table table-bordered table-striped table-hover'>
                  <tr>
                           <td> </td>
                 </tr>
                 </table>
-        <table  cellpadding=3 cellspacing=3
-                        align=center>
+        <table  class='table table-bordered table-striped table-hover'>
                  <tr>
-                          <td>Kriteria : </td>
+                          <th class='text-center'>Kriteria : </th>
                 </tr>
                 </table>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <div class='justify-content-center row'>
+                <table class='table table-bordered table-striped table-hover'>
                      <tr>       
                         <tr>
                         <td>$faktor1</td>
@@ -183,21 +183,19 @@
                     </tr>
                     </tr>
                 </table>
-
-                <table  cellpadding=3 cellspacing=3
-                        align=center>
+                </div>
+                <table  class='table table-bordered table-striped table-hover'>
                  <tr>
                           <td> </td>
                 </tr>
                 </table>
-              <table  cellpadding=3 cellspacing=3
-                        align=center>
+              <table  class='table table-bordered table-striped table-hover'>
                  <tr>
-                          <td>Bobot Faktor : </td>
+                          <th class='text-center'>Bobot Faktor : </th>
                 </tr>
                 </table>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <div class='justify-content-center row'>
+                <table class='table table-bordered table-striped table-hover'>
                      <tr>       
                         <tr>
                         <td align='right'>";
@@ -212,21 +210,19 @@
                     </tr>
                     </tr>
                 </table>
-
-                <table  cellpadding=3 cellspacing=3
-                        align=center>
+                </div>
+                <table  class='table table-bordered table-striped table-hover'>
                  <tr>
                           <td> </td>
                 </tr>
                 </table>
-                <table  cellpadding=3 cellspacing=3
-                        align=center>
+                <table  class='table table-bordered table-striped table-hover'>
                  <tr>
-                          <td>Nilai Bobot : </td>
+                          <th class='text-center'>Nilai Bobot : </th>
                 </tr>
                 </table>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <div class='justify-content-center row'>
+                <table class='table table-bordered table-striped table-hover'>
                      <tr>       
                         <tr>    
                     
@@ -275,27 +271,25 @@
                 </tr>
                     </tr>
                 </table>
-                <table  cellpadding=3 cellspacing=3
-                        align=center>
+                </div>
+                <table  class='table table-bordered table-striped table-hover'>
                  <tr>
                           <td> </td>
                 </tr>
                 </table>
-                <table  cellpadding=3 cellspacing=3
-                        align=center>
+                <table  class='table table-bordered table-striped table-hover'>
                  <tr>
-                          <td>Perkalian : </td>
+                          <th class='text-center'>Perkalian : </th>
                 </tr>
                 </table>
 
-                <table  cellpadding=3 cellspacing=3
-                        align=center>
+                <table  class='table table-bordered table-striped table-hover'>
                  <tr>
                           <td> </td>
                 </tr>
                 </table>
-                <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                <div class='justify-content-center row'>
+                <table class='table table-bordered table-striped table-hover'>
                      <tr>    
                     
                     <td align='right'>";
@@ -350,25 +344,23 @@
                 </tr>
                 <table cellpadding=3 cellspacing=3
                 align=center>
+                </div>
             <tr>
                 </table>
 
-                <table  cellpadding=3 cellspacing=3
-                        align=center>
+                <table  class='table table-bordered table-striped table-hover'>
                  <tr>
                           <td> </td>
                 </tr>
                 </table>
-                <table  cellpadding=3 cellspacing=3
-                        align=center>
+                <table  class='table table-bordered table-striped table-hover'>
                  <tr>
-                          <td>Hasil : </td>
+                          <th  class='text-center'>Hasil : </th>
                 </tr>
                 </table>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <div class='justify-content-center row'>
+                <table class='table table-bordered table-striped table-hover'>
                      <tr>       
-                        <tr>
                         <td align='right'>";
     echo number_format($sum, 2, ',', '.');
     echo "</td>
@@ -382,24 +374,17 @@
     echo number_format($sum3, 2, ',', '.');
     echo "</td>
                     </tr>
-                    </tr>
                 </table>
-
-                 <table  cellpadding=3 cellspacing=3
-                        align=center>
-                 <tr>
-                          <td> </td>
-                </tr>
-                </table>
+                </div>
+                  
                
-            <table border='1' cellpadding='4' cellspacing=4
-            align=center>
+            <table class='table table-bordered mt-5 table-striped table-hover'>
                 <tr>
-                	<th>nama</th>
-                    <td>$faktor1</td>
-                    <td>$faktor2</td>
-                    <td>$faktor3</td>
-                    <td>hasil</td>
+                	<th>Nama</th>
+                    <th>$faktor1</th>
+                    <th>$faktor2</th>
+                    <th>$faktor3</th>
+                    <th>Hasil</th>
                 </tr>
                 <tr>    
                     <td>$nama1</td>
@@ -466,10 +451,9 @@
     	 			
    				 </table>           
             </table>
-            <table  cellpadding=3 cellspacing=3
-                        align=center>
+            <table  class='table table-bordered table-striped table-hover'>
                  <tr>
-            <td align='center'>hasil tertinggi adalah ";
+            <td align='center'>Hasil tertinggi adalah = ";
     echo max($all);
     "</td>
               </tr>
@@ -483,17 +467,19 @@
 
 
     foreach ($short as $x => $x_value) {
-      echo "<table  cellpadding=3 cellspacing=3
-                        align=center>
+      echo "<table  class='table table-bordered table-striped table-hover'>
                  <tr>
           <td align='center'>";
       echo "  " . $x . "  " . $x_value;
       echo "</td>
           </tr>
-                </table>";
+                </table>
+                
+                </div>";
     }
   }
 
+  include('footer.php')
   ?>
 
 

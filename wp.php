@@ -229,9 +229,9 @@
     arsort($short);
 
     echo "
+    <div class='container'>
         <h3 align=center>Alternatif :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <table  class='table table-bordered table-hover table-sm table-striped'>
                       
                      <tr>       
                         <tr>
@@ -245,8 +245,7 @@
 
                
                  <h3 align=center>Kriteria :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <table  class='table table-bordered table-hover table-sm table-striped'>
                        
                      <tr>       
                         <tr>
@@ -261,8 +260,7 @@
                
                 </table>
                 <h3 align=center>Kepentingan:</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <table  class='table table-bordered table-hover table-sm table-striped'>
                        
                      <tr>       
                         <tr>
@@ -277,20 +275,19 @@
                     </tr>
                
                 </table>
-                <table border='1' cellpadding='3' cellspacing=3 align=center>
+                <table class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
-                        <th bgcolor='blue'>total kepentingan</th>
+                        <th bgcolor='blue'>Total Kepentingan</th>
                         <th>$sumbobot</th>
                     </tr>
                     </tr>
                 </table>
                  
-                  <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                  <table  class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
-                        <th bgcolor='yellow'>bobot kepentingan</th>
+                        <th bgcolor='yellow'>Bobot Kepentingan</th>
                         <td align='right'>";
     echo number_format($nm1, 5, ',', '.');
     echo "</td>
@@ -314,17 +311,16 @@
                 </table>
 
                  
-            <table border='1' cellpadding='4' cellspacing=4
-            align=center>
+            <table class='table table-bordered table-hover table-sm table-striped'>
                 <tr>
-                	<th>Altrnatif</th>
-                    <td>$faktor1</td>
-                    <td>$faktor2</td>
-                    <td>$faktor3</td>
-                    <td>$faktor4</td>
-                    <td>$faktor5</td>
-                    <td>$faktor6</td>
-                    <td>hasil</td>
+                	<th>Alternatif</th>
+                    <th>$faktor1</th>
+                    <th>$faktor2</th>
+                    <th>$faktor3</th>
+                    <th>$faktor4</th>
+                    <th>$faktor5</th>
+                    <th>$faktor6</th>
+                    <th>Hasil</th>
                 </tr>
                 <tr>    
                     <td>$nama1</td>
@@ -423,11 +419,10 @@
     echo "</td>
                 </tr>
                 
-                 <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                 <table  class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
-                        <th bgcolor='yellow'>pangkat</th>
+                        <th bgcolor='yellow'>Pangkat</th>
                         <td align='right'>";
     echo number_format($p1, 2, ',', '.');
     echo "</td>
@@ -449,11 +444,11 @@
                     </tr>
                     </tr>
                 </table>
-                <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                </div>
+                <table  class='table  table-responsive table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
-                        <th bgcolor='yellow'>Spangkat</th>
+                        <th bgcolor='yellow'>Pangkat</th>
                         <td align='right'>";
     echo number_format($s1, 5, ',', '.');
     echo "</td>
@@ -470,10 +465,11 @@
                     </tr>
                     </tr>
                 </table>
+                <div class='container'>
                 <table cellpadding=3 cellspacing=3
           		  align=center>
     	 			<tr>
-    	 			<td>hasil tertinggi adalah ";
+    	 			<td>Hasil tertinggi adalah = ";
     echo max($all);
     "</td>
             		</tr>
@@ -495,7 +491,8 @@
       echo "  " . $x . "  " . $x_value;
       echo "</td>
           
-                </table>";
+                </table>
+                </div>";
     }
   }
   ?>

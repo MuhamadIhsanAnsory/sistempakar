@@ -377,8 +377,11 @@
 
           echo "  
          <h3 align=center>Alternatif :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+         <div class='container'>
+          <div class='justify-content-center row'>
+          
+          
+            <table class='table table-bordered table-hover table-sm table-striped'>
                       
                      <tr>       
                         <tr>
@@ -390,10 +393,13 @@
                     </tr>
                 </table>
 
-               
+                </div>
+                </div>
                  <h3 align=center>Kriteria :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <div class='container'>
+          <div class='justify-content-center row'>
+          
+                 <table class='table table-bordered table-hover table-sm table-striped'>
                        
                      <tr>       
                         <tr>
@@ -407,9 +413,13 @@
                     </tr>
                
                 </table>
+                </div>
+                </div>
                 <h3 align=center>Bobot :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <div class='container'>
+          <div class='justify-content-center row'>
+          
+                <table class='table table-bordered table-hover table-sm table-striped'>
                        
                      <tr>       
                         <tr>
@@ -424,9 +434,13 @@
                     </tr>
                
                 </table>
+                </div>
+                </div>
                  <h3 align=center>Cost Benefit :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <div class='container'>
+          <div class='justify-content-center row'>
+          
+                 <table class='table table-bordered table-hover table-sm table-striped'>
                        
                      <tr>       
                         <tr>
@@ -440,14 +454,19 @@
                     </tr>
                     </tr>
                   </table>
-
-                <table  cellpadding=3 cellspacing=3
-                        align=center>
+                  </div>
+                </div>
+               <div class='container'>
+               
+               <div class='justify-content-center row'>
+                <table  class='table table-bordered table-hover table-sm table-striped'>
                  <tr>
                           <td> </td>
                 </tr>
                 </table>
-                <table border='1' cellpadding='3' cellspacing=3 align=center>
+                </div>
+                <div class='justify-content-center row'>
+                <table class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
                         <th bgcolor='blue'>total kepentingan</th>
@@ -455,12 +474,11 @@
                     </tr>
                     </tr>
                 </table>
-                 
+                 </div>
                   
 
-                 
-            <table border='1' cellpadding='4' cellspacing=4
-            align=center>
+                 <div class='justify-content-center row'>
+            <table class='table table-bordered table-hover table-sm table-striped'>
                 <tr>
                 	<th>Altrnatif</th>
                     <td>$faktor1</td>
@@ -568,8 +586,10 @@
           echo "</td>
                 </tr>
                 
-                 <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                <div class='container'>
+          <div class='justify-content-center row'>
+           
+                <table class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                         <tr>
                         <th bgcolor='yellow'>pembagi</th>
@@ -595,8 +615,10 @@
                     </tr>
                 </table>
                 <h3 align=center>Normalisasi :</h3>
-                <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+                <div class='container'>
+          <div class='justify-content-center row'>
+          
+                <table class='table table-bordered table-hover table-sm table-striped'>
                      <tr>
                     <tr>
                         <td align='right'>";
@@ -684,16 +706,18 @@
                     </tr>
                     </tr>
                 </table>
-                <table cellpadding=3 cellspacing=3
-          		  align=center>
+                </div>
+                <div class='justify-content-center row'>
+                <table class='table table-bordered table-hover table-sm table-striped'>
     	 			<tr>
-    	 			<td>hasil tertinggi adalah ";
+    	 			<td class='text-center'>hasil tertinggi adalah ";
           echo max($all);
           "</td>
             		</tr>
    				 </table>
                
             </table>
+            </div>
         ";
           echo "<br>";
           echo "<tr>";
@@ -702,14 +726,14 @@
 
 
           foreach ($short as $x => $x_value) {
-               echo "<table  cellpadding=3 cellspacing=3
-                        align=center>
+               echo "<table  class='table table-bordered table-hover table-sm table-striped'>
                  
           <td align='center'>";
                echo "  " . $x . "  " . $x_value;
                echo "</td>
           
-                </table>";
+                </table>
+                </div>";
           }
      }
      ?>

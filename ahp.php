@@ -218,21 +218,25 @@
       <h4 align=center>Contoh pengisian bobot perbandingan :</h4>
       <table class="table table-responsive table-bordered table-hover table-sm table-striped">
         <div class="row">
-          <td align='center'>Harga Lebih Penting Dari Kualitas (Nilai=5)</td>
-          <td align='center'>Harga Lebih Penting Dari Fitur (Nilai=5) </td>
-          <td align='center'>Harga Lebih Penting Dari Populer (Nilai=5) </td>
-          <td align='center'>Harga Sedikit Lebih Penting Dari Purna Jual (Nilai=3) </td>
-          <td align='center'>Harga Sedikit Lebih Penting Dari Keawetan (Nilai=3) </td>
-          <td align='center'>Kualitas Sama Penting Dengan Fitur (Nilai=1) </td>
-          <td align='center'>Kualitas Sama Penting Dengan Populer (Nilai=1) </td>
-          <td align='center'>Purna Jual Sedikit Lebih Penting Dari Kualitas (Nilai=1/3) </td>
-          <td align='center'>Keawetan Sedikit Lebih Penting Dari Kualitas (Nilai=1/3) </td>
-          <td align='center'>Fitur Sama Penting Dengan Populer (Nilai=1) </td>
-          <td align='center'>Purna Jual Sedikit Lebih Penting Dari Fitur (Nilai=1/3) </td>
-          <td align='center'>Keawetan Sedikit Lebih Penting Dari Fitur (Nilai=1/3)</td>
-          <td align='center'>Purna Jual Lebih Penting Dari Populer (Nilai=1/3) </td>
-          <td align='center'>Keawetan Sedikit Lebih Penting Dari Populer (Nilai=1/3) </td>
-          <td align='center'>Purna Jual Sama Penting Dengan Keawetan (Nilai=1) </td>
+          <tr>
+            <td align='center'>Harga Lebih Penting Dari Kualitas (Nilai=5)</td>
+            <td align='center'>Harga Lebih Penting Dari Fitur (Nilai=5) </td>
+            <td align='center'>Harga Lebih Penting Dari Populer (Nilai=5) </td>
+            <td align='center'>Harga Sedikit Lebih Penting Dari Purna Jual (Nilai=3) </td>
+            <td align='center'>Harga Sedikit Lebih Penting Dari Keawetan (Nilai=3) </td>
+            <td align='center'>Kualitas Sama Penting Dengan Fitur (Nilai=1) </td>
+            <td align='center'>Kualitas Sama Penting Dengan Populer (Nilai=1) </td>
+            <td align='center'>Purna Jual Sedikit Lebih Penting Dari Kualitas (Nilai=1/3) </td>
+          </tr>
+          <tr>
+            <td align='center'>Keawetan Sedikit Lebih Penting Dari Kualitas (Nilai=1/3) </td>
+            <td align='center'>Fitur Sama Penting Dengan Populer (Nilai=1) </td>
+            <td align='center'>Purna Jual Sedikit Lebih Penting Dari Fitur (Nilai=1/3) </td>
+            <td align='center'>Keawetan Sedikit Lebih Penting Dari Fitur (Nilai=1/3)</td>
+            <td align='center'>Purna Jual Lebih Penting Dari Populer (Nilai=1/3) </td>
+            <td align='center'>Keawetan Sedikit Lebih Penting Dari Populer (Nilai=1/3) </td>
+            <td align='center'>Purna Jual Sama Penting Dengan Keawetan (Nilai=1) </td>
+          </tr>
         </div>
       </table>
       <h4 align=center bgcolor=Red>Hanya diisi dengan value nilainya saja</h4>
@@ -872,12 +876,17 @@
     arsort($short);
 
     echo "
-                 
+                
             <h3 align=center>Alternatif :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <div class='card'>
+              <div class='card-body'>
+              
+              <div class='container'>
+                
+            <div class='row justify-content-center ml-5'>
+              <table  class='table table-center table-bordered table-hover table-sm table-striped'>
                       
-                     <tr>       
+                    <tr>       
                         <tr>
                         <td>$nama1</td>
                         <td>$nama2</td>
@@ -886,13 +895,11 @@
                     </tr>
                     </tr>
                 </table>
-
-               
-                 <h3 align=center>Kriteria :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                       
-                     <tr>       
+              
+                <h3 align=center>Kriteria :</h3>
+            <table  class='table table-center table-bordered table-hover table-sm table-striped'>
+                      
+                    <tr>       
                         <tr>
                         <td>$faktor1</td>
                         <td>$faktor2</td>
@@ -902,13 +909,13 @@
                         <td>$faktor6</td>
                     </tr>
                     </tr>
-               
+              
                 </table>
-                 <h3 align=center>Cost Benefit :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                       
-                     <tr>       
+                
+                <h3 align=center>Cost Benefit :</h3>
+            <table class='table table-center table-bordered table-hover table-sm table-striped'>
+                      
+                    <tr>       
                         <tr>
                         <td>$cost1</td>
                         <td>$cost2</td>
@@ -919,12 +926,11 @@
                         
                     </tr>
                     </tr>
-               
+              
                 </table>
                 <h3 align=center>X =</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                       
+            <table class='table table-center table-bordered table-hover table-sm table-striped'>
+                      
                     <tr>       
                             
                     <td align='right'>";
@@ -1016,11 +1022,10 @@
     echo "</td>
                 
                     </tr>
-               
+              
                 </table>
                 <h3 align=center>K =</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
+            <table class='table table-center table-bordered table-hover table-sm table-striped'>
                       
                     <tr>       
                             
@@ -1152,11 +1157,10 @@
 
                 
                 </table>
-                 <h3 align=center> Jk :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                       
-                     <tr>       
+                <h3 align=center> Jk :</h3>
+            <table class='table table-center table-bordered table-hover table-sm table-striped'>
+                      
+                    <tr>       
                         <tr>
                         <td>$p1</td>
                         <td>$p2</td>
@@ -1167,12 +1171,11 @@
                         
                     </tr>
                     </tr>
-               
+              
                 </table>
                 <h3 align=center> Nk :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                       
+            <table class='table table-center table-bordered table-hover table-sm table-striped'>
+                      
                       <td>
                     <tr>
                     
@@ -1195,8 +1198,8 @@
     echo number_format($nl17, 5, ',', '.');
     echo "</td>  
                     </tr>
-                     <tr>
-                     
+                    <tr>
+                    
                         <td align='right'>";
     echo number_format($n5, 5, ',', '.');
     echo "</td>
@@ -1209,7 +1212,7 @@
                         <td align='right'>";
     echo number_format($n8, 5, ',', '.');
     echo "</td>
-                         <td align='right'>";
+                        <td align='right'>";
     echo number_format($nl18, 5, ',', '.');
     echo "</td>
                         <td align='right'>";
@@ -1230,15 +1233,15 @@
                         <td align='right'>";
     echo number_format($nl3, 5, ',', '.');
     echo "</td>
-                         <td align='right'>";
+                        <td align='right'>";
     echo number_format($nl20, 5, ',', '.');
     echo "</td>
                         <td align='right'>";
     echo number_format($nl21, 5, ',', '.');
     echo "</td>  
                     </tr>
-                     <tr>
-                     
+                    <tr>
+                    
                         <td align='right'>";
     echo number_format($nl4, 5, ',', '.');
     echo "</td>
@@ -1251,7 +1254,7 @@
                         <td align='right'>";
     echo number_format($nl7, 5, ',', '.');
     echo "</td>
-                         <td align='right'>";
+                        <td align='right'>";
     echo number_format($nl22, 5, ',', '.');
     echo "</td>
                         <td align='right'>";
@@ -1272,15 +1275,15 @@
                         <td align='right'>";
     echo number_format($nl11, 5, ',', '.');
     echo "</td>
-                         <td align='right'>";
+                        <td align='right'>";
     echo number_format($nl24, 5, ',', '.');
     echo "</td>
                         <td align='right'>";
     echo number_format($nl25, 5, ',', '.');
     echo "</td>  
                     </tr>
-                     <tr>
-                     
+                    <tr>
+                    
                         <td align='right'>";
     echo number_format($nl12, 5, ',', '.');
     echo "</td>
@@ -1293,7 +1296,7 @@
                         <td align='right'>";
     echo number_format($nl15, 5, ',', '.');
     echo "</td>
-                         <td align='right'>";
+                        <td align='right'>";
     echo number_format($nl26, 5, ',', '.');
     echo "</td>
                         <td align='right'>";
@@ -1301,13 +1304,12 @@
     echo "</td>  
                     </tr>
                     </td>
-               
+              
                 </table>
                 <h3 align=center> Jnk :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                       
-                     <tr>
+            <table class='table table-center table-bordered table-hover table-sm table-striped'>
+                      
+                    <tr>
                         <td align='right'>";
     echo number_format($h1, 5, ',', '.');
     echo "</td>
@@ -1327,12 +1329,11 @@
     echo number_format($h6, 5, ',', '.');
     echo "</td>  
                     </tr>
-               
+              
                 </table>
                 <h3 align=center> W :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                       
+            <table class='table table-center table-bordered table-hover table-sm table-striped'>
+                      
                       <tr>
                         <td align='right'>";
     echo number_format($hl1, 5, ',', '.');
@@ -1353,12 +1354,11 @@
     echo number_format($hl6, 5, ',', '.');
     echo "</td>  
                     </tr>
-               
+              
                 </table>
-                 <h3 align=center> KW :</h3>
-            <table border='1' cellpadding=3 cellspacing=3
-                        align=center>
-                       
+                <h3 align=center> KW :</h3>
+            <table class='table table-center table-bordered table-hover table-sm table-striped'>
+                      
                       <tr>
                         <td align='right'>";
     echo number_format($nb1, 5, ',', '.');
@@ -1379,12 +1379,16 @@
     echo number_format($nb6, 5, ',', '.');
     echo "</td>  
                     </tr>
-               
+              
                 </table>
+                </div>
+                </div>
+            </div>
+            </div>
                 <h3 align=center>nilai t:</h3>
-                     <table  cellpadding=3 cellspacing=3
+                    <table  cellpadding=3 cellspacing=3
                         align=center>
-                     <tr>
+                    <tr>
                     <tr>
                         <td align='right'>";
     echo number_format($t, 5, ',', '.');
@@ -1392,9 +1396,9 @@
                     </tr>
                     </table>
                     <h3 align=center>nilai CI:</h3>
-                     <table  cellpadding=3 cellspacing=3
+                    <table  cellpadding=3 cellspacing=3
                         align=center>
-                     <tr>
+                    <tr>
                     <tr>
                         <td align='right'>";
     echo number_format($ci, 5, ',', '.');
@@ -1402,22 +1406,24 @@
                     </tr>
                     </table>
                     <h3 align=center>Cr:</h3>
-                     <table  cellpadding=3 cellspacing=3
+                    <table  cellpadding=3 cellspacing=3
                         align=center>
-                     <tr>
+                    <tr>
                     <tr>
                         <td align='right'>";
     echo number_format($k, 5, ',', '.');
     echo "</td>
-                         <th bgcolor='blue'>==</th>
+                        <th bgcolor='blue'>==</th>
                         <td align='right'>";
     echo number_format($k, 1, ',', '.');
     echo "</td>    
                     </tr>
                     </table>
                     <h3 align=center> Normin :</h3>
-                 <table border='1'cellpadding=3 cellspacing=3
-                             align=center>
+                    <div class='container'>
+                      <div class='justify-content-center row'>
+                      
+                <table class='table table-center table-bordered table-hover table-sm table-striped'>
                             <tr>
                                 <th colspan='5' bgcolor='yellow'>perangkaian</th>
                             </tr>
@@ -1429,7 +1435,7 @@
                             <td>$nama4</td>
                             
                             </tr>
-                             <tr>    
+                            <tr>    
                                 <td>$faktor1</td>
                                 <td align='right'>";
     echo number_format($m1, 5, ',', '.');
@@ -1475,7 +1481,7 @@
     echo "</td>
                             </tr>
                             <tr>    
-                               <td>$faktor4</td>
+                              <td>$faktor4</td>
                                 <td align='right'>";
     echo number_format($m41, 5, ',', '.');
     echo "</td>
@@ -1490,7 +1496,7 @@
     echo "</td>
                             </tr>
                             <tr>    
-                               <td>$faktor5</td>
+                              <td>$faktor5</td>
                                 <td align='right'>";
     echo number_format($m51, 5, ',', '.');
     echo "</td>
@@ -1505,7 +1511,7 @@
     echo "</td>
                             </tr>
                             <tr>    
-                               <td>$faktor6</td>
+                              <td>$faktor6</td>
                                 <td align='right'>";
     echo number_format($m61, 5, ',', '.');
     echo "</td>
@@ -1520,10 +1526,14 @@
     echo "</td>
                             </tr>
                 </table>
+                </div>
+                    </div>
+
+              
                 <table  cellpadding=3 cellspacing=3
                         align=center>
-                 <tr>
-            <td align='center'>hasil tertinggi adalah ";
+                <tr>
+            <td align='center'>Hasil tertinggi adalah =  ";
     echo max($all);
     "</td>
               </tr>
@@ -1539,12 +1549,13 @@
     foreach ($short as $x => $x_value) {
       echo "<table  cellpadding=3 cellspacing=3
                         align=center>
-                 
+                
           <td align='center'>";
       echo "  " . $x . "  " . $x_value;
       echo "</td>
           
-                </table>";
+                </table>
+                ";
     }
   }
   ?>
